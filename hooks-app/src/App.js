@@ -1,37 +1,51 @@
 import React, {useState} from 'react';
-import useDarkMode from './components/customHook'
-import Form from './components/form'
-
-import './App.css';
 
 
-export default () => {
-  const [toDO, setToDo] = useState([
-    {text: "Create a GitHub repository"},
-    {text: "Clone your repository"},
-    {text: "Create your new React app"}
+
+import './app.scss';
+
+
+
+function App() {
+
+
+  const [todos, setTodos] = useState([
+    {
+      content: 'Create a GitHub repository',
+      isCompleted: false,
+    },
+    {
+      content: 'Clone your repository',
+      isCompleted: false,
+    },
+    {
+      content: 'create your new React app',
+      isCompleted: false,
+    }
   ]);
+
   
-
-
   return (
-    <div className="App">
-      <header className="App-header">
-      <div className = "todo-list">
-      <Form
-          key={index}
-          index={index}
-          todo={todo}
-        />
-      <div>   </div>
+    <body>
+      <main>
+      <h1>DeltaV Daily To-Do's</h1>
+      <form className="todo-list">
       
-
-
+        <ul>
+        {todos.map((todo, i) => (
+      <div className="todo">
+        <div className="checkbox" />
+        <input type="text" value={todo.content} />
       </div>
-      </header>
-    </div>
+    ))}
+        </ul>
+      </form>
+      </main>
+    </body>
+    
   );
-
 }
+
+export default App;
 
 
