@@ -1,19 +1,30 @@
 import React, {useState} from 'react';
+import useDarkMode from './components/customHook'
+import Form from './components/form'
 
 import './App.css';
 
 
 export default () => {
-  const [count, setCount] = useState(0);
+  const [toDO, setToDo] = useState([
+    {text: "Create a GitHub repository"},
+    {text: "Clone your repository"},
+    {text: "Create your new React app"}
+  ]);
+  
 
 
   return (
     <div className="App">
       <header className="App-header">
-      <div className = "App">
-      <div>  count: {count} </div>
-      <button onClick ={() => setCount (count + 1)}>ADD</button>
-      <button onClick ={() => setCount (count - 1)}>SUBTRACT</button>
+      <div className = "todo-list">
+      <Form
+          key={index}
+          index={index}
+          todo={todo}
+        />
+      <div>   </div>
+      
 
 
       </div>
