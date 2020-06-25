@@ -92,3 +92,41 @@ body, html {
     }
 
 }
+* .dark  {
+    background-color: rgb(59, 59, 59);
+    color: white;
+
+
+    ul {
+
+        li {
+
+            &.completed-true {
+              span {
+                background: purple;
+                text-decoration:line-through;
+                &:hover {
+                   background: lavender;
+                }
+              }
+            }
+
+            span {
+                background: #e0e0e0;
+                cursor:pointer;
+                &:hover {
+                    background: plum;
+                }
+            }
+
+            button {
+                background: transparent;
+                border:none;
+                color:blue;
+                padding:0;
+                margin: 0 .75em;
+            }
+
+        }
+    }
+}
