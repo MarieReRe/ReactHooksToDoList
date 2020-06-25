@@ -14,8 +14,8 @@ export default function Login() {
         return (
             <div className="Login">
                 <form onSubmit={handleSubmit}>
-                    <input placeholder="Username" ></input>
-                    <input placeholder="Password" ></input>
+                    <input placeholder="Username" />
+                    <input placeholder="Password" type= "password" name="password" />
                 </form>
             </div>
         )
