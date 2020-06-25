@@ -9,10 +9,10 @@ import useTheme from '../../contexts/theme.js'
 
 
 import './todo.scss';
-import { ThemeContext } from '../../contexts/theme.js';
+
 
 // Should be in .env as REACT_APP_API_SERVER instead of hard coded
-const todoAPI = 'https://deltav-todo.azurewebsites.net/api/v1/todos';
+const todoAPI = 'https://deltav-todo-alpha.azurewebsites.net/index.html';
 
 const ToDo = () => {
   const [todoList, setToDoList] = useState([]);

@@ -10,7 +10,7 @@ export default function Login() {
         const { username, password } = e.target.elements;
         Login();
     }
- 
+
     return (
         <form onSubmit={this.handleSubmit}>
           <input placeholder="Username" name="username" />
