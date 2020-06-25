@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'node-sass';
+
 
 //make this a function compoment
 export default function Login() {
@@ -11,14 +11,13 @@ export default function Login() {
         Login();
     }
  
-        return (
-            <div className="Login">
-                <form onSubmit={handleSubmit}>
-                    <input placeholder="Username" />
-                    <input placeholder="Password" type= "password" name="password" />
-                </form>
-            </div>
-        )
+    return (
+        <form onSubmit={this.handleSubmit}>
+          <input placeholder="Username" name="username" />
+          <input placeholder="Password" type="password" name="password" />
+          <button>Log In</button>
+        </form>
+      )
 }
 
 
